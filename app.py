@@ -101,5 +101,6 @@ def favicon():
 def error_handler(error):
     return render_template('error.html', name=error.name, code=error.code),404
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(port=port)
