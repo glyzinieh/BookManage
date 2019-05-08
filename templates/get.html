@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<img src="{{cover}}"><br>
+<form action="/save/" method="post" enctype="multipart/form-data">
+    カバー写真:<input type="text" value="{{cover}}" placeholder="カバー写真" name="cover"><br>
+    isbn13:<input type="text" value="{{isbn}}" placeholder="isbn13" name="isbn"><br>
+    題名:<input type="text" value="{{title}}" placeholder="題名" name="title" required><br>
+    出版社:<input type="text" value="{{publisher}}" placeholder="出版社" name="publisher"><br>
+    シリーズ:<input type="text" value="{{series}}" placeholder="シリーズ" name="series"><br>
+    巻:<input type="text" value="{{volume}}" placeholder="巻" name="volume"><br>
+    作者:<input type="text" value="{{author}}" placeholder="作者" name="author"><br>
+    出版日:<input type="text" value="{{pubdate}}" placeholder="出版日" name="pubdate"><br>
+    詳細:<textarea placeholder="詳細" name="text">{{text}}</textarea><br>
+    書架:<input type="text" placeholder="書架" name="location" required><br>
+    {{msg}}<br>
+    <a href="/record/">登録に戻る</a><br>
+    <button type="submit">保存</button>
+</form>
+
+{% endblock %}

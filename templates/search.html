@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/save/" method="post" enctype="multipart/form-data">
+    <select name="item" size="1" required>
+        <option value="isbn">isbn13</option>
+        <option value="title">題名</option>
+        <option value="publisher">出版社</option>
+        <option value="author">作者</option>
+        <option value="text">詳細</option>
+        <option value="location">書架</option>
+    </select>
+    <input type="text" placeholder="キーワード" name="keyword">
+    <button type="submit">検索</button>
+</form>
+
+{% endblock %}

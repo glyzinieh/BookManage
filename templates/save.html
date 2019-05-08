@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+カバー写真:{{cover}}<br>
+isbn13:{{isbn}}<br>
+題名:{{title}}
+出版社:{{publisher}}<br>
+シリーズ:{{series}}<br>
+巻:{{volume}}<br>
+作者:{{author}}<br>
+出版日:{{pubdate}}<br>
+詳細:{{text}}<br>
+書架:{{location}}<br>
+で保存しました。<br>
+<hr>
+10秒後に自動で登録に移動します。<br>
+<a href="/record/">登録に戻る</a><br>
+<a href="/">ホームに戻る</a>
+<meta http-equiv="refresh" content="10; url=/record/">
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/upload/" method="post" enctype="multipart/form-data">
+  <input type="file" name="file" accept="image/*" required>
+  <button type="submit">送信</button>
+</form>
+<hr>
+<a href="/">ホームに戻る</a>
+
+{% endblock %}

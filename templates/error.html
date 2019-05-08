@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script>
+    alert('何らかのエラーが発生したようです。');    
+</script>
+<h1>何らかのエラーが発生したようです。</h1>
+<h2>
+    前のページに<a href="javascript:history.back()">戻る</a><br>
+    indexへは<a href="/">こちら</a>
+</h1>
+<h2>詳細</h2>
+name:{{name}}<br>
+code:{{code}}
+
+
+{% endblock %}
